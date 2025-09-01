@@ -127,7 +127,7 @@ fn analyze_chinese_content(pdf_str: &str) {
     // Look for Chinese characters in the raw PDF
     let chinese_patterns = [
         ("回单", "回单 (receipt)"),
-        ("支付宝", "支付宝 (Alipay)"),
+        ("支付宝", "支付宝 (Payment Platform)"),
         ("电子", "电子 (electronic)"),
         ("银行", "银行 (bank)"),
         ("金额", "金额 (amount)"),
