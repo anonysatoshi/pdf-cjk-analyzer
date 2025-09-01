@@ -1,12 +1,11 @@
-# Alipay PDF Analysis Project
+# Enhanced PDF Analysis Project
 
-This repository contains a comprehensive analysis of an Alipay electronic receipt PDF with digital signature verification and enhanced text extraction capabilities.
+This repository contains a comprehensive analysis of PDF documents with digital signature verification and enhanced text extraction capabilities, specifically focused on CJK (Chinese, Japanese, Korean) text support.
 
 ## 📁 Project Structure
 
 ```
-Alipay/
-├── 电子回单_2025082300085000022244077482480011350582.pdf  # Original Alipay PDF
+Enhanced-PDF-Analysis/
 ├── zkpdf/                                                  # Enhanced zkPDF library
 │   ├── pdf-utils/extractor/                               # Enhanced PDF text extractor
 │   │   ├── src/
@@ -50,16 +49,16 @@ The extractor now successfully handles:
 - ✅ Proper Unicode character mapping
 
 ### Extracted Content Example
-From the Alipay PDF, the system extracts:
+From a sample PDF with CJK content, the system extracts:
 ```
-编号: 2025082300085000022244077482480011350582
+编号: [Transaction ID]
 币种：人民币 / 单位：元
-回单生成时间：2025-08-23 09:09:10
-付款方：王阳
-收款方：单珍品初
-支付宝流水号：20241211200040011100480013539895
-付款金额：1060.00
-大写：壹仟零陆拾元整
+回单生成时间：[Timestamp]
+付款方：[Sender Name]
+收款方：[Recipient Name]
+支付宝流水号：[Transaction Number]
+付款金额：[Amount]
+大写：[Amount in Chinese]
 ```
 
 ## 🛠️ Technical Improvements
@@ -100,6 +99,7 @@ From the Alipay PDF, the system extracts:
 2. **Digital Signature Verification**: Validate authenticity of signed documents
 3. **CJK Text Processing**: Handle Chinese, Japanese, and Korean text in PDFs
 4. **Zero-Knowledge Proofs**: Generate cryptographic proofs of text content
+5. **Document Processing**: General-purpose PDF text extraction with CJK support
 
 ## 🔧 Setup Instructions
 
