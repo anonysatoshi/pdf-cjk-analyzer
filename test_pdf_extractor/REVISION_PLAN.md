@@ -4,7 +4,7 @@
 - ✅ Library has Type0 font support
 - ✅ Library has ToUnicode CMap parsing
 - ✅ Library has Unicode handling
-- ❌ CMap parsing fails for Alipay PDF
+- ❌ CMap parsing fails for sample PDF with CJK content
 - ❌ Character codes don't map correctly
 
 ## Step 1: Enhanced CMap Parsing
@@ -52,7 +52,7 @@
 4. `zkpdf/pdf-utils/extractor/src/lib.rs` - Main extraction logic
 
 ## Testing Strategy:
-1. Test with Alipay PDF
+1. Test with sample PDF with CJK content
 2. Test with sample PDF (ensure no regression)
 3. Test with other Chinese PDFs if available
 4. Performance testing with large PDFs

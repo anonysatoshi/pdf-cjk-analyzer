@@ -199,9 +199,9 @@ fn main() {
     println!("Enhanced PDF Extractor");
     println!("=====================\n");
     
-    // Test with the Alipay PDF
-    let alipay_pdf = "../电子回单_2025082300085000022244077482480011350582.pdf";
-    match enhanced_extract_text(alipay_pdf) {
+    // Test with a sample PDF with CJK content
+    let sample_pdf = "../sample_cjk_document.pdf";
+    match enhanced_extract_text(sample_pdf) {
         Ok(text_pages) => {
             println!("\n=== Final Results ===");
             for (i, text) in text_pages.iter().enumerate() {

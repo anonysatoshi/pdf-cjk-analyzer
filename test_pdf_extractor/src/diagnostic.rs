@@ -154,9 +154,9 @@ fn main() {
     println!("PDF Extractor Diagnostic Tool");
     println!("============================\n");
     
-    // Analyze the Alipay PDF
-    let alipay_pdf = "../电子回单_2025082300085000022244077482480011350582.pdf";
-    analyze_pdf_structure(alipay_pdf);
+    // Analyze a sample PDF with CJK content
+    let sample_pdf = "../sample_cjk_document.pdf";
+    analyze_pdf_structure(sample_pdf);
     
     println!("\n{}", "=".repeat(50));
     

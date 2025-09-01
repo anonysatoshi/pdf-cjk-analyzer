@@ -66,9 +66,9 @@ fn main() {
     println!("Enhanced Font Extraction Test");
     println!("============================\n");
     
-    // Test with the Alipay PDF
-    let alipay_pdf = "../电子回单_2025082300085000022244077482480011350582.pdf";
-    test_enhanced_extraction(alipay_pdf);
+    // Test with a sample PDF with CJK content
+    let sample_pdf = "../sample_cjk_document.pdf";
+    test_enhanced_extraction(sample_pdf);
     
     println!("\n{}", "=".repeat(50));
     

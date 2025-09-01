@@ -106,7 +106,7 @@ fn main() {
     println!("Enhanced CMap Diagnostic Tool");
     println!("============================\n");
     
-    // Analyze the Alipay PDF's CMap content
-    let alipay_pdf = "../电子回单_2025082300085000022244077482480011350582.pdf";
-    analyze_cmap_content(alipay_pdf);
+    // Analyze a sample PDF's CMap content
+    let sample_pdf = "../sample_cjk_document.pdf";
+    analyze_cmap_content(sample_pdf);
 }

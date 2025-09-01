@@ -46,8 +46,8 @@ fn comprehensive_extract_text(pdf_path: &str) {
                         let chinese_phrases = [
                             "回单生成时间", "付款方", "收款方", "支付宝流水号", 
                             "付款时间", "付款金额", "摘要", "转账",
-                            "王阳", "单珍品初", "壹仟零陆拾元整", "1060.00",
-                            "2025-08-23", "2024-12-11", "15941190353", "139******41"
+                            "[Sender Name]", "[Recipient Name]", "[Amount in Chinese]", "[Amount]",
+                            "[Date 1]", "[Date 2]", "[Phone 1]", "[Phone 2]"
                         ];
                         
                         println!("\n=== KEY PHRASES SEARCH ===");
@@ -75,7 +75,7 @@ fn main() {
     println!("Comprehensive PDF Text Extractor");
     println!("================================\n");
     
-    // Test with the Alipay PDF
-    let alipay_pdf = "../电子回单_2025082300085000022244077482480011350582.pdf";
-    comprehensive_extract_text(alipay_pdf);
+    // Test with a sample PDF with CJK content
+    let sample_pdf = "../sample_cjk_document.pdf";
+    comprehensive_extract_text(sample_pdf);
 }

@@ -1,13 +1,14 @@
 use std::fs;
+
 use extractor::extract_text;
 
 fn main() {
     println!("Testing PDF extractor with different PDFs...\n");
     
-    // Test 1: Alipay PDF
-    let alipay_pdf = "../电子回单_2025082300085000022244077482480011350582.pdf";
-    println!("=== Test 1: Alipay PDF ===");
-    test_pdf(alipay_pdf);
+    // Test 1: Sample PDF with CJK content
+let sample_pdf = "../sample_cjk_document.pdf";
+println!("=== Test 1: Sample PDF with CJK Content ===");
+test_pdf(sample_pdf);
     
     // Test 2: Sample PDF from the project
     let sample_pdf = "digitally_signed.pdf";
@@ -53,9 +54,9 @@ fn test_pdf(pdf_path: &str) {
                 if pdf_str.contains("支付宝") {
                     println!("✓ Contains Chinese text '支付宝' in raw PDF");
                 }
-                if pdf_str.contains("Alipay") {
-                    println!("✓ Contains 'Alipay' in raw PDF");
-                }
+                    if pdf_str.contains("支付宝") {
+        println!("✓ Contains '支付宝' in raw PDF");
+    }
             }
             
             match extract_text(pdf_data) {
@@ -81,7 +82,7 @@ fn test_pdf(pdf_path: &str) {
                         println!("Contains Chinese characters: {}", text.chars().any(|c| c.is_ascii() == false));
                         println!("Contains numbers: {}", text.chars().any(|c| c.is_numeric()));
                         println!("Contains '回单': {}", text.contains("回单"));
-                        println!("Contains 'Alipay': {}", text.contains("Alipay"));
+                        println!("Contains '支付宝': {}", text.contains("支付宝"));
                         println!("Contains '支付宝': {}", text.contains("支付宝"));
                         println!("Contains 'Sample': {}", text.contains("Sample"));
                         println!("Contains 'Signed': {}", text.contains("Signed"));
